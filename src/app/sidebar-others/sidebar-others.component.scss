@@ -1,0 +1,137 @@
+@mixin flex-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+aside {
+    width: 408px;
+    min-height: 100vh;
+    padding: 5px 25px 100px 35px;
+    overflow-y: scroll;
+
+    .searchbar-container {
+        background-color: rgb(239, 243, 244);
+        padding: 13px 20px;
+        border-radius: 30px;
+
+        input {
+            background-color: rgb(239, 243, 244);
+            margin-left: 20px;
+            font-size: 15px;
+        }
+    }
+
+    .trends-for-you {
+        background-color: #f5f5f5;
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 15px;
+
+        .heading {
+            @include flex-space-between;
+            font-size: 17px;
+        }
+
+        .trend-item {
+            @include flex-space-between;
+            margin: 20px 0;
+
+            .trend-location,
+            .number-of-tweets {
+                font-size: 14px;
+                color: gray;
+            }
+
+            .trend-hashtag {
+                font-size: 14px;
+                font-weight: bold;
+                margin: 5px 0;
+            }
+
+            i {
+                color: gray;
+            }
+        }
+
+        a {
+            display: inline-block;
+            color: rgb(29, 155, 240);
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    }
+
+    .who-to-follow {
+        background-color: #f5f5f5;
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 15px;
+
+        .heading {
+            font-size: 17px;
+        }
+
+        .follow-list {
+            margin-top: 30px;
+
+            .user-profile-container {
+                display: flex;
+                align-items: center;
+                margin-bottom: 23px;
+                font-size: 15px;
+
+                .user-avatar {
+                    height: 45px;
+                    width: 45px;
+                    border-radius: 50px;
+                }
+
+                .user-info {
+                    margin-left: 12px;
+
+                    .display-name {
+                        font-weight: bold;
+                        margin-bottom: 3px;
+                    }
+
+                    .user-name {
+                        color: gray;
+                    }
+                }
+
+                a {
+                    margin-left: auto;
+                    background-color: black;
+                    color: white;
+                    padding: 8px 20px;
+                    border-radius: 30px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        a {
+            display: inline-block;
+            color: rgb(29, 155, 240);
+            margin-top: 10px;
+            font-size: 14px;
+        }
+    }
+
+    .footer-links {
+        margin-top: 20px;
+        padding-right: 40px;
+
+        a {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: light;
+            color: gray;
+            margin-left: 10px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
