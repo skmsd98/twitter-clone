@@ -1,0 +1,137 @@
+@mixin profile-avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+
+.container {
+    border-left: 1px solid #efefef;
+    border-right: 1px solid #efefef;
+    width: 590px;
+    margin-left: 290px;
+    min-height: 100vh;
+
+    .header {
+        border-bottom: 1px solid #efefef;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        font-size: 108%;
+    }
+
+    .create-tweet-area {
+        display: flex;
+        padding: 10px 20px 20px 15px;
+
+        img {
+            @include profile-avatar;
+        }
+
+        .typing-area {
+            margin-left: 15px;
+            width: 100%;
+
+            textarea {
+                font-size: 20px;
+                width: 100%;
+                padding-top: 15px;
+                // padding-bottom: 15px;
+            }
+
+            .tweet-additions {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                i {
+                    margin-right: 18px;
+                    color: rgb(29, 155, 240);
+                }
+
+                .tweet-button {
+                    padding: 10px 17px;
+                    background-color: rgb(29, 155, 240);
+                    color: white;
+                    font-weight: bold;
+                    border-radius: 30px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .tweet-item {
+        display: flex;
+        padding: 10px 20px 20px 15px;
+        border-top: 1px solid #efefef;
+        font-size: 15px;
+
+        img {
+            @include profile-avatar;
+        }
+
+        .tweet-data {
+            margin-left: 15px;
+            width: 100%;
+
+            .tweet-header {
+                display: flex;
+                justify-content: space-between;
+
+                .tweet-user-info {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .display-name {
+                        font-weight: bold;
+                    }
+
+                    .user-name,
+                    span,
+                    .tweet-date-time {
+                        color: gray;
+                        margin-left: 5px;
+                    }
+                }
+
+                i {
+                    color: gray;
+                }
+            }
+
+            .tweet-content {
+                margin-top: 3px;
+
+                img {
+                    width: 100%;
+                    height: 400px;
+                    border-radius: 20px;
+                    margin-top: 10px;
+                }
+            }
+
+            .tweet-reactions {
+                display: flex;
+                margin-top: 15px;
+                font-size: 14px;
+
+                & * {
+                    color: gray;
+                }
+                
+                .reaction-item {
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    margin-left: 80px;
+
+                    span {
+                        margin-left: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
