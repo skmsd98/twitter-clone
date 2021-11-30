@@ -8,7 +8,6 @@
     border-left: 1px solid #efefef;
     border-right: 1px solid #efefef;
     width: 590px;
-    margin-left: 290px;
     min-height: 100vh;
 
     .header {
@@ -80,6 +79,7 @@
             .tweet-header {
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
 
                 .tweet-user-info {
                     display: flex;
@@ -122,7 +122,7 @@
                 & * {
                     color: gray;
                 }
-                
+
                 .reaction-item {
                     &:first-child {
                         margin-left: 0;
@@ -136,5 +136,26 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        width: auto;
+        padding-right: 15px;
+    }
+
+    .tweet-content img {
+        height: 50vw !important;
+    }
+}
+
+@media (max-width: 610px) {
+    .tweet-reactions {
+        justify-content: space-between;
+    }
+
+    .reaction-item {
+        margin-left: initial !important;
     }
 }
